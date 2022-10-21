@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>persistence - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.18.7";</script>
+<script src="../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package persistence
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "persistence"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#GenerateObjectIdIfNotExists">func GenerateObjectIdIfNotExists[T any](obj any) T</a></dd>
+			
+				
+				<dd><a href="index.html#GenerateObjectMapIdIfNotExists">func GenerateObjectMapIdIfNotExists(objectMap map[string]any)</a></dd>
+			
+				
+				<dd><a href="index.html#GetObjectId">func GetObjectId[K any](obj any) (id K)</a></dd>
+			
+				
+				<dd><a href="index.html#ItemsToAnySlice">func ItemsToAnySlice[T any](items []T) []any</a></dd>
+			
+			
+				
+				<dd><a href="index.html#ISqlServerPersistenceOverrides">type ISqlServerPersistenceOverrides</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#IdentifiableJsonSqlServerPersistence">type IdentifiableJsonSqlServerPersistence</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#InheritIdentifiableJsonSqlServerPersistence">func InheritIdentifiableJsonSqlServerPersistence[T any, K any](overrides ISqlServerPersistenceOverrides[T], tableName string) *IdentifiableJsonSqlServerPersistence[T, K]</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentifiableJsonSqlServerPersistence.ConvertFromPublic">func (c *IdentifiableJsonSqlServerPersistence[T, K]) ConvertFromPublic(value T) (map[string]any, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentifiableJsonSqlServerPersistence.ConvertFromPublicPartial">func (c *IdentifiableJsonSqlServerPersistence[T, K]) ConvertFromPublicPartial(value map[string]any) (map[string]any, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentifiableJsonSqlServerPersistence.ConvertToPublic">func (c *IdentifiableJsonSqlServerPersistence[T, K]) ConvertToPublic(rows *sql.Rows) (T, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentifiableJsonSqlServerPersistence.EnsureTable">func (c *IdentifiableJsonSqlServerPersistence[T, K]) EnsureTable(idType string, dataType string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentifiableJsonSqlServerPersistence.UpdatePartially">func (c *IdentifiableJsonSqlServerPersistence[T, K]) UpdatePartially(ctx context.Context, correlationId string, id K, data cdata.AnyValueMap) (result T, err error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#IdentifiableSqlServerPersistence">type IdentifiableSqlServerPersistence</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#InheritIdentifiableSqlServerPersistence">func InheritIdentifiableSqlServerPersistence[T any, K any](overrides ISqlServerPersistenceOverrides[T], tableName string) *IdentifiableSqlServerPersistence[T, K]</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentifiableSqlServerPersistence.Create">func (c *IdentifiableSqlServerPersistence[T, K]) Create(ctx context.Context, correlationId string, item T) (result T, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentifiableSqlServerPersistence.DeleteById">func (c *IdentifiableSqlServerPersistence[T, K]) DeleteById(ctx context.Context, correlationId string, id K) (result T, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentifiableSqlServerPersistence.DeleteByIds">func (c *IdentifiableSqlServerPersistence[T, K]) DeleteByIds(ctx context.Context, correlationId string, ids []K) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentifiableSqlServerPersistence.GetListByIds">func (c *IdentifiableSqlServerPersistence[T, K]) GetListByIds(ctx context.Context, correlationId string, ids []K) (items []T, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentifiableSqlServerPersistence.GetOneById">func (c *IdentifiableSqlServerPersistence[T, K]) GetOneById(ctx context.Context, correlationId string, id K) (item T, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentifiableSqlServerPersistence.Set">func (c *IdentifiableSqlServerPersistence[T, K]) Set(ctx context.Context, correlationId string, item T) (result T, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentifiableSqlServerPersistence.Update">func (c *IdentifiableSqlServerPersistence[T, K]) Update(ctx context.Context, correlationId string, item T) (result T, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentifiableSqlServerPersistence.UpdatePartially">func (c *IdentifiableSqlServerPersistence[T, K]) UpdatePartially(ctx context.Context, correlationId string, id K, data cdata.AnyValueMap) (result T, err error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SqlServerPersistence">type SqlServerPersistence</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#InheritSqlServerPersistence">func InheritSqlServerPersistence[T any](overrides ISqlServerPersistenceOverrides[T], tableName string) *SqlServerPersistence[T]</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.Clear">func (c *SqlServerPersistence[T]) Clear(ctx context.Context, correlationId string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.ClearSchema">func (c *SqlServerPersistence[T]) ClearSchema()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.Close">func (c *SqlServerPersistence[T]) Close(ctx context.Context, correlationId string) (err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.Configure">func (c *SqlServerPersistence[T]) Configure(ctx context.Context, config *cconf.ConfigParams)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.ConvertFromPublic">func (c *SqlServerPersistence[T]) ConvertFromPublic(value T) (map[string]any, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.ConvertFromPublicPartial">func (c *SqlServerPersistence[T]) ConvertFromPublicPartial(value map[string]any) (map[string]any, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.ConvertToPublic">func (c *SqlServerPersistence[T]) ConvertToPublic(rows *sql.Rows) (T, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.Create">func (c *SqlServerPersistence[T]) Create(ctx context.Context, correlationId string, item T) (result T, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.CreateSchema">func (c *SqlServerPersistence[T]) CreateSchema(ctx context.Context, correlationId string) (err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.DefineSchema">func (c *SqlServerPersistence[T]) DefineSchema()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.DeleteByFilter">func (c *SqlServerPersistence[T]) DeleteByFilter(ctx context.Context, correlationId string, filter string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.EnsureIndex">func (c *SqlServerPersistence[T]) EnsureIndex(name string, keys map[string]string, options map[string]string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.EnsureSchema">func (c *SqlServerPersistence[T]) EnsureSchema(schemaStatement string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.GenerateColumns">func (c *SqlServerPersistence[T]) GenerateColumns(columns []string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.GenerateColumnsAndValues">func (c *SqlServerPersistence[T]) GenerateColumnsAndValues(objMap map[string]any) ([]string, []any)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.GenerateParameters">func (c *SqlServerPersistence[T]) GenerateParameters(valuesCount int) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.GenerateSetParameters">func (c *SqlServerPersistence[T]) GenerateSetParameters(columns []string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.GetCountByFilter">func (c *SqlServerPersistence[T]) GetCountByFilter(ctx context.Context, correlationId string, filter string) (int64, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.GetListByFilter">func (c *SqlServerPersistence[T]) GetListByFilter(ctx context.Context, correlationId string, filter string, sort string, selection string) (items []T, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.GetOneRandom">func (c *SqlServerPersistence[T]) GetOneRandom(ctx context.Context, correlationId string, filter string) (item T, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.GetPageByFilter">func (c *SqlServerPersistence[T]) GetPageByFilter(ctx context.Context, correlationId string, filter string, paging cdata.PagingParams, sort string, selection string) (page cdata.DataPage[T], err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.IsOpen">func (c *SqlServerPersistence[T]) IsOpen() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.IsTerminated">func (c *SqlServerPersistence[T]) IsTerminated() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.Open">func (c *SqlServerPersistence[T]) Open(ctx context.Context, correlationId string) (err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.QuoteIdentifier">func (c *SqlServerPersistence[T]) QuoteIdentifier(value string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.QuotedTableName">func (c *SqlServerPersistence[T]) QuotedTableName() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.SetReferences">func (c *SqlServerPersistence[T]) SetReferences(ctx context.Context, references cref.IReferences)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SqlServerPersistence.UnsetReferences">func (c *SqlServerPersistence[T]) UnsetReferences()</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/persistence/IdentifiableJsonSqlServerPersistence.go">IdentifiableJsonSqlServerPersistence.go</a>
+			
+				<a href="http://localhost:6060/src/persistence/IdentifiableSqlServerPersistence.go">IdentifiableSqlServerPersistence.go</a>
+			
+				<a href="http://localhost:6060/src/persistence/SqlServerPersistence.go">SqlServerPersistence.go</a>
+			
+				<a href="http://localhost:6060/src/persistence/Utils.go">Utils.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+			
+			
+			<h2 id="GenerateObjectIdIfNotExists">func <a href="http://localhost:6060/src/persistence/Utils.go?s=619:669#L17">GenerateObjectIdIfNotExists</a>
+				<a class="permalink" href="index.html#GenerateObjectIdIfNotExists">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GenerateObjectIdIfNotExists[T <a href="http://localhost:6060/pkg/builtin/#any">any</a>](obj <a href="http://localhost:6060/pkg/builtin/#any">any</a>) T</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GenerateObjectMapIdIfNotExists">func <a href="http://localhost:6060/src/persistence/Utils.go?s=368:429#L9">GenerateObjectMapIdIfNotExists</a>
+				<a class="permalink" href="index.html#GenerateObjectMapIdIfNotExists">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GenerateObjectMapIdIfNotExists(objectMap map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetObjectId">func <a href="http://localhost:6060/src/persistence/Utils.go?s=888:927#L28">GetObjectId</a>
+				<a class="permalink" href="index.html#GetObjectId">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetObjectId[K <a href="http://localhost:6060/pkg/builtin/#any">any</a>](obj <a href="http://localhost:6060/pkg/builtin/#any">any</a>) (id K)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="ItemsToAnySlice">func <a href="http://localhost:6060/src/persistence/Utils.go?s=199:243#L1">ItemsToAnySlice</a>
+				<a class="permalink" href="index.html#ItemsToAnySlice">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func ItemsToAnySlice[T <a href="http://localhost:6060/pkg/builtin/#any">any</a>](items []T) []<a href="http://localhost:6060/pkg/builtin/#any">any</a></pre>
+			
+			
+			
+
+		
+		
+			
+			
+			<h2 id="ISqlServerPersistenceOverrides">type <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=668:911#L13">ISqlServerPersistenceOverrides</a>
+				<a class="permalink" href="index.html#ISqlServerPersistenceOverrides">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ISqlServerPersistenceOverrides[T <a href="http://localhost:6060/pkg/builtin/#any">any</a>] interface {
+    DefineSchema()
+    ConvertFromPublic(item T) (map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)
+    ConvertToPublic(item *<a href="http://localhost:6060/pkg/database/sql/">sql</a>.<a href="http://localhost:6060/pkg/database/sql/#Rows">Rows</a>) (T, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)
+    ConvertFromPublicPartial(item map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>) (map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IdentifiableJsonSqlServerPersistence">type <a href="http://localhost:6060/src/persistence/IdentifiableJsonSqlServerPersistence.go?s=4172:4281#L88">IdentifiableJsonSqlServerPersistence</a>
+				<a class="permalink" href="index.html#IdentifiableJsonSqlServerPersistence">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+IdentifiableJsonSqlServerPersistence is an abstract persistence component that stores data in SqlServer in JSON or JSONB fields
+and implements a number of CRUD operations over data items with unique ids.
+The data items must implement IIdentifiable interface.
+</p>
+<p>
+The JSON table has only two fields: id and data.
+</p>
+<p>
+In basic scenarios child classes shall only override GetPageByFilter,
+getListByFilter or deleteByFilter operations with specific filter function.
+All other operations can be used out of the box.
+</p>
+<p>
+In complex scenarios child classes can implement additional operations by
+accessing c._collection and c._model properties.
+</p>
+<pre>Configuration parameters
+
+	- table:                       (optional) SQLServer table name
+	- schema:                       (optional) SQLServer table name
+	- connection(s):
+		- discovery_key:             (optional) a key to retrieve the connection from IDiscovery
+		- host:                      host name or IP address
+		- port:                      port number (default: 27017)
+		- uri:                       resource URI or connection string with all parameters in it
+	- credential(s):
+		- store_key:                 (optional) a key to retrieve the credentials from ICredentialStore
+		- username:                  (optional) user name
+		- password:                  (optional) user password
+	- options:
+		- connect_timeout:      (optional) number of milliseconds to wait before timing out when connecting a new client (default: 0)
+		- idle_timeout:         (optional) number of milliseconds a client must sit idle in the pool and not be checked out (default: 10000)
+		- max_pool_size:        (optional) maximum number of clients the pool should contain (default: 10)
+
+References
+	- *:logger:*:*:1.0           (optional) ILogger components to pass log messages components to pass log messages
+	- *:discovery:*:*:1.0        (optional) IDiscovery services
+	- *:credential-store:*:*:1.0 (optional) Credential stores to resolve credentials
+</pre>
+<p>
+Example:
+</p>
+<pre>type MySqlServerPersistence struct {
+	*persist.IdentifiableJsonSqlServerPersistence[MyData, string]
+}
+
+func NewMySqlServerPersistence() *MySqlServerPersistence {
+	c := &amp;MySqlServerPersistence{}
+	c.IdentifiableJsonSqlServerPersistence = persist.InheritIdentifiableJsonSqlServerPersistence[MyData, string](c, &#34;mydata&#34;)
+	return c
+}
+
+func (c *MySqlServerPersistence) DefineSchema() {
+	c.ClearSchema()
+	c.EnsureTable(&#34;&#34;, &#34;&#34;)
+	c.EnsureSchema(&#34;ALTER TABLE [&#34; + c.TableName + &#34;] ADD [data_key] AS JSON_VALUE([data],&#39;$.key&#39;)&#34;)
+	c.EnsureIndex(c.TableName+&#34;_key&#34;, map[string]string{&#34;data_key&#34;: &#34;1&#34;}, map[string]string{&#34;unique&#34;: &#34;true&#34;})
+}
+
+func (c *MySqlServerPersistence) GetPageByFilter(ctx context.Context, correlationId string,
+	filter cdata.FilterParams, paging cdata.PagingParams) (page cdata.DataPage[MyData], err error) {
+
+	key, ok := filter.GetAsNullableString(&#34;Key&#34;)
+	filterObj := &#34;&#34;
+	if ok &amp;&amp; key != &#34;&#34; {
+		filterObj += &#34;JSON_VALUE([data],&#39;$.key&#39;)=&#39;&#34; + key + &#34;&#39;&#34;
+	}
+
+	return c.IdentifiableJsonSqlServerPersistence.GetPageByFilter(ctx, correlationId,
+		filterObj, paging,
+		&#34;&#34;, &#34;&#34;,
+	)
+}
+
+func main() {
+	persistence := NewMySqlServerPersistence()
+	persistence.Configure(context.Background(), cconf.NewConfigParamsFromTuples(
+		&#34;host&#34;, &#34;localhost&#34;,
+		&#34;port&#34;, 1433,
+	))
+	err := persitence.Open(context.Background(), &#34;123&#34;)
+
+	item, err := persistence.Create(context.Background(), &#34;123&#34;, Mydata{Id: &#34;1&#34;, Name: &#34;ABC&#34;})
+	page, err := persistence.GetPageByFilter(&#34;123&#34;, *NewFilterParamsFromTuples(&#34;name&#34;, &#34;ABC&#34;), nil)
+
+	fmt.Println(page.data) // Result: { id: &#34;1&#34;, name: &#34;ABC&#34; }
+
+	res, err := persistence.DeleteById(context.Background(),&#34;123&#34;, &#34;1&#34;)
+}
+</pre>
+
+			<pre>type IdentifiableJsonSqlServerPersistence[T <a href="http://localhost:6060/pkg/builtin/#any">any</a>, K <a href="http://localhost:6060/pkg/builtin/#any">any</a>] struct {
+    *<a href="index.html#IdentifiableSqlServerPersistence">IdentifiableSqlServerPersistence</a>[T, K]
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="InheritIdentifiableJsonSqlServerPersistence">func <a href="http://localhost:6060/src/persistence/IdentifiableJsonSqlServerPersistence.go?s=4503:4672#L96">InheritIdentifiableJsonSqlServerPersistence</a>
+					<a class="permalink" href="index.html#InheritIdentifiableJsonSqlServerPersistence">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func InheritIdentifiableJsonSqlServerPersistence[T <a href="http://localhost:6060/pkg/builtin/#any">any</a>, K <a href="http://localhost:6060/pkg/builtin/#any">any</a>](overrides <a href="index.html#ISqlServerPersistenceOverrides">ISqlServerPersistenceOverrides</a>[T], tableName <a href="http://localhost:6060/pkg/builtin/#string">string</a>) *<a href="index.html#IdentifiableJsonSqlServerPersistence">IdentifiableJsonSqlServerPersistence</a>[T, K]</pre>
+				<p>
+InheritIdentifiableJsonSqlServerPersistence creates a new instance of the persistence component.
+</p>
+<pre>Parameters:
+	- overrides References to override virtual methods
+	- tableName    (optional) a table name.
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="IdentifiableJsonSqlServerPersistence.ConvertFromPublic">func (*IdentifiableJsonSqlServerPersistence[T, K]) <a href="http://localhost:6060/src/persistence/IdentifiableJsonSqlServerPersistence.go?s=7087:7190#L170">ConvertFromPublic</a>
+					<a class="permalink" href="index.html#IdentifiableJsonSqlServerPersistence.ConvertFromPublic">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentifiableJsonSqlServerPersistence">IdentifiableJsonSqlServerPersistence</a>[T, K]) ConvertFromPublic(value T) (map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ConvertFromPublic convert object value from public to internal format.
+</p>
+<pre>	Parameters:
+   - value     an object in public format to convert.
+</pre>
+<p>
+Returns converted object in internal format.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentifiableJsonSqlServerPersistence.ConvertFromPublicPartial">func (*IdentifiableJsonSqlServerPersistence[T, K]) <a href="http://localhost:6060/src/persistence/IdentifiableJsonSqlServerPersistence.go?s=7620:7743#L189">ConvertFromPublicPartial</a>
+					<a class="permalink" href="index.html#IdentifiableJsonSqlServerPersistence.ConvertFromPublicPartial">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentifiableJsonSqlServerPersistence">IdentifiableJsonSqlServerPersistence</a>[T, K]) ConvertFromPublicPartial(value map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>) (map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ConvertFromPublicPartial convert object value from public to internal format.
+</p>
+<pre>Parameters:
+	- value     an object in public format to convert.
+Returns: converted object in internal format.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentifiableJsonSqlServerPersistence.ConvertToPublic">func (*IdentifiableJsonSqlServerPersistence[T, K]) <a href="http://localhost:6060/src/persistence/IdentifiableJsonSqlServerPersistence.go?s=5823:5918#L126">ConvertToPublic</a>
+					<a class="permalink" href="index.html#IdentifiableJsonSqlServerPersistence.ConvertToPublic">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentifiableJsonSqlServerPersistence">IdentifiableJsonSqlServerPersistence</a>[T, K]) ConvertToPublic(rows *<a href="http://localhost:6060/pkg/database/sql/">sql</a>.<a href="http://localhost:6060/pkg/database/sql/#Rows">Rows</a>) (T, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ConvertToPublic converts object value from internal to public format.
+</p>
+<pre>Parameters:
+	- value an object in internal format to convert.
+Returns: converted object in public format.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentifiableJsonSqlServerPersistence.EnsureTable">func (*IdentifiableJsonSqlServerPersistence[T, K]) <a href="http://localhost:6060/src/persistence/IdentifiableJsonSqlServerPersistence.go?s=5067:5163#L106">EnsureTable</a>
+					<a class="permalink" href="index.html#IdentifiableJsonSqlServerPersistence.EnsureTable">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentifiableJsonSqlServerPersistence">IdentifiableJsonSqlServerPersistence</a>[T, K]) EnsureTable(idType <a href="http://localhost:6060/pkg/builtin/#string">string</a>, dataType <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+				<p>
+EnsureTable Adds DML statement to automatically create JSON(B) table
+</p>
+<pre>	Parameters:
+  - idType type of the id column (default: VARCHAR(32))
+  - dataType type of the data column (default: NVARCHAR(MAX))
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentifiableJsonSqlServerPersistence.UpdatePartially">func (*IdentifiableJsonSqlServerPersistence[T, K]) <a href="http://localhost:6060/src/persistence/IdentifiableJsonSqlServerPersistence.go?s=8399:8564#L208">UpdatePartially</a>
+					<a class="permalink" href="index.html#IdentifiableJsonSqlServerPersistence.UpdatePartially">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentifiableJsonSqlServerPersistence">IdentifiableJsonSqlServerPersistence</a>[T, K]) UpdatePartially(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>,
+    id K, data <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#AnyValueMap">AnyValueMap</a>) (result T, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+UpdatePartially updates only few selected fields in a data item.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlation_id    (optional) transaction id to trace execution through call chain.
+	- id                an id of data item to be updated.
+	- data              a map with fields to be updated.
+</pre>
+<p>
+Returns: receives updated item or error.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="IdentifiableSqlServerPersistence">type <a href="http://localhost:6060/src/persistence/IdentifiableSqlServerPersistence.go?s=4063:4153#L85">IdentifiableSqlServerPersistence</a>
+				<a class="permalink" href="index.html#IdentifiableSqlServerPersistence">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+IdentifiableSqlServerPersistence Abstract persistence component that stores data in SqlServer
+and implements a number of CRUD operations over data items with unique ids.
+The data items must implement IIdentifiable interface.
+</p>
+<p>
+In basic scenarios child classes shall only override GetPageByFilter,
+getListByFilter or deleteByFilter operations with specific filter function.
+All other operations can be used out of the box.
+</p>
+<p>
+In complex scenarios child classes can implement additional operations by
+accessing c._collection and c._model properties.
+</p>
+<pre>Configuration parameters
+	- collection:               (optional) SqlServer collection name
+	- connection(s):
+		- discovery_key:        (optional) a key to retrieve the connection from IDiscovery
+		- host:                 host name or IP address
+		- port:                 port number (default: 27017)
+		- uri:                  resource URI or connection string with all parameters in it
+	- credential(s):
+		- store_key:            (optional) a key to retrieve the credentials from ICredentialStore
+		- username:             (optional) user name
+		- password:             (optional) user password
+	- options:
+		- connect_timeout:      (optional) number of milliseconds to wait before timing out when connecting a new client (default: 0)
+		- idle_timeout:         (optional) number of milliseconds a client must sit idle in the pool and not be checked out (default: 10000)
+		- max_pool_size:        (optional) maximum number of clients the pool should contain (default: 10)
+
+References
+	- *:logger:*:*:1.0           (optional) ILogger components to pass log messages components to pass log messages
+	- *:discovery:*:*:1.0        (optional) IDiscovery services
+	- *:credential-store:*:*:1.0 (optional) Credential stores to resolve credentials
+</pre>
+<p>
+Example:
+</p>
+<pre>type SqlServerServerPersistence struct {
+	*persist.IdentifiableSqlServerPersistence[MyData, string]
+}
+
+func NewSqlServerServerPersistence() *SqlServerServerPersistence {
+	c := &amp;SqlServerServerPersistence{}
+	c.IdentifiableSqlServerPersistence = persist.InheritIdentifiableSqlServerPersistence[MyData, string](c, &#34;mydata&#34;)
+	return c
+}
+
+func (c *SqlServerServerPersistence) DefineSchema() {
+	c.ClearSchema()
+	c.EnsureSchema(&#34;CREATE TABLE [&#34; + c.TableName + &#34;] ([id] VARCHAR(32) PRIMARY KEY, [key] VARCHAR(50), [content] VARCHAR(MAX))&#34;)
+	c.EnsureIndex(c.IdentifiableSqlServerPersistence.TableName+&#34;_key&#34;, map[string]string{&#34;key&#34;: &#34;1&#34;}, map[string]string{&#34;unique&#34;: &#34;true&#34;})
+}
+
+func (c *SqlServerServerPersistence) GetPageByFilter(ctx context.Context, correlationId string,
+	filter cdata.FilterParams, paging cdata.PagingParams) (page cdata.DataPage[MyData], err error) {
+
+	key, ok := filter.GetAsNullableString(&#34;Key&#34;)
+	filterObj := &#34;&#34;
+	if ok &amp;&amp; key != &#34;&#34; {
+		filterObj += &#34;[key]=&#39;&#34; + key + &#34;&#39;&#34;
+	}
+	sorting := &#34;&#34;
+
+	return c.IdentifiableSqlServerPersistence.GetPageByFilter(ctx, correlationId,
+		filterObj, paging,
+		sorting, &#34;&#34;,
+	)
+}
+
+func main() {
+	persistence := NewSqlServerServerPersistence()
+
+	persistence.Configure(context.Background(), NewConfigParamsFromTuples(
+		&#34;host&#34;, &#34;localhost&#34;,
+		&#34;port&#34;, 1433,
+	))
+
+	err := persistence.Open(context.Background(), &#34;123&#34;)
+
+	item, err := persistence.Create(context.Background(), &#34;123&#34;, MyData{Id: &#34;1&#34;, Name: &#34;ABC&#34;})
+	page, err := persistence.GetPageByFilter(context.Background(), &#34;123&#34;, *NewFilterParamsFromTuples(&#34;name&#34;, &#34;ABC&#34;), nil)
+
+	fmt.Println(page.Data)
+	res, err := persistence.DeleteById(context.Background(), &#34;123&#34;, &#34;1&#34;)
+}
+</pre>
+
+			<pre>type IdentifiableSqlServerPersistence[T <a href="http://localhost:6060/pkg/builtin/#any">any</a>, K <a href="http://localhost:6060/pkg/builtin/#any">any</a>] struct {
+    *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="InheritIdentifiableSqlServerPersistence">func <a href="http://localhost:6060/src/persistence/IdentifiableSqlServerPersistence.go?s=4398:4559#L94">InheritIdentifiableSqlServerPersistence</a>
+					<a class="permalink" href="index.html#InheritIdentifiableSqlServerPersistence">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func InheritIdentifiableSqlServerPersistence[T <a href="http://localhost:6060/pkg/builtin/#any">any</a>, K <a href="http://localhost:6060/pkg/builtin/#any">any</a>](overrides <a href="index.html#ISqlServerPersistenceOverrides">ISqlServerPersistenceOverrides</a>[T], tableName <a href="http://localhost:6060/pkg/builtin/#string">string</a>) *<a href="index.html#IdentifiableSqlServerPersistence">IdentifiableSqlServerPersistence</a>[T, K]</pre>
+				<p>
+InheritIdentifiableSqlServerPersistence creates a new instance of the persistence component.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- overrides References to override virtual methods
+	- tableName    (optional) a table name.
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="IdentifiableSqlServerPersistence.Create">func (*IdentifiableSqlServerPersistence[T, K]) <a href="http://localhost:6060/src/persistence/IdentifiableSqlServerPersistence.go?s=7137:7265#L180">Create</a>
+					<a class="permalink" href="index.html#IdentifiableSqlServerPersistence.Create">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentifiableSqlServerPersistence">IdentifiableSqlServerPersistence</a>[T, K]) Create(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, item T) (result T, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Create a data item.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlation_id    (optional) transaction id to trace execution through call chain.
+	- item              an item to be created.
+Returns: (optional)  created item or error.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentifiableSqlServerPersistence.DeleteById">func (*IdentifiableSqlServerPersistence[T, K]) <a href="http://localhost:6060/src/persistence/IdentifiableSqlServerPersistence.go?s=12292:12422#L333">DeleteById</a>
+					<a class="permalink" href="index.html#IdentifiableSqlServerPersistence.DeleteById">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentifiableSqlServerPersistence">IdentifiableSqlServerPersistence</a>[T, K]) DeleteById(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, id K) (result T, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+DeleteById deletes a data item by its unique id.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlation_id    (optional) transaction id to trace execution through call chain.
+	- id                an id of the item to be deleted
+Returns: (optional)  deleted item or error.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentifiableSqlServerPersistence.DeleteByIds">func (*IdentifiableSqlServerPersistence[T, K]) <a href="http://localhost:6060/src/persistence/IdentifiableSqlServerPersistence.go?s=13280:13398#L364">DeleteByIds</a>
+					<a class="permalink" href="index.html#IdentifiableSqlServerPersistence.DeleteByIds">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentifiableSqlServerPersistence">IdentifiableSqlServerPersistence</a>[T, K]) DeleteByIds(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, ids []K) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+DeleteByIds deletes multiple data items by their unique ids.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlationId     (optional) transaction id to trace execution through call chain.
+	- ids                of data items to be deleted.
+Returns: (optional)  error or null for success.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentifiableSqlServerPersistence.GetListByIds">func (*IdentifiableSqlServerPersistence[T, K]) <a href="http://localhost:6060/src/persistence/IdentifiableSqlServerPersistence.go?s=5061:5199#L111">GetListByIds</a>
+					<a class="permalink" href="index.html#IdentifiableSqlServerPersistence.GetListByIds">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentifiableSqlServerPersistence">IdentifiableSqlServerPersistence</a>[T, K]) GetListByIds(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>,
+    ids []K) (items []T, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetListByIds gets a list of data items retrieved by given unique ids.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlationId     (optional) transaction id to trace execution through call chain.
+	- ids of data items to be retrieved
+Returns: a data list or error.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentifiableSqlServerPersistence.GetOneById">func (*IdentifiableSqlServerPersistence[T, K]) <a href="http://localhost:6060/src/persistence/IdentifiableSqlServerPersistence.go?s=6236:6364#L152">GetOneById</a>
+					<a class="permalink" href="index.html#IdentifiableSqlServerPersistence.GetOneById">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentifiableSqlServerPersistence">IdentifiableSqlServerPersistence</a>[T, K]) GetOneById(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, id K) (item T, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetOneById gets a data item by its unique id.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlationId     (optional) transaction id to trace execution through call chain.
+	- id                an id of data item to be retrieved.
+</pre>
+<p>
+Returns: data item or error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentifiableSqlServerPersistence.Set">func (*IdentifiableSqlServerPersistence[T, K]) <a href="http://localhost:6060/src/persistence/IdentifiableSqlServerPersistence.go?s=7754:7879#L194">Set</a>
+					<a class="permalink" href="index.html#IdentifiableSqlServerPersistence.Set">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentifiableSqlServerPersistence">IdentifiableSqlServerPersistence</a>[T, K]) Set(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, item T) (result T, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Set a data item. If the data item exists it updates it,
+otherwise it creates a new data item.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlation_id    (optional) transaction id to trace execution through call chain.
+	- item              an item to be set.
+Returns: (optional)  updated item or error.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentifiableSqlServerPersistence.Update">func (*IdentifiableSqlServerPersistence[T, K]) <a href="http://localhost:6060/src/persistence/IdentifiableSqlServerPersistence.go?s=9600:9728#L254">Update</a>
+					<a class="permalink" href="index.html#IdentifiableSqlServerPersistence.Update">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentifiableSqlServerPersistence">IdentifiableSqlServerPersistence</a>[T, K]) Update(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, item T) (result T, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Update a data item.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlation_id    (optional) transaction id to trace execution through call chain.
+	- item              an item to be updated.
+Returns          (optional)  updated item or error.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentifiableSqlServerPersistence.UpdatePartially">func (*IdentifiableSqlServerPersistence[T, K]) <a href="http://localhost:6060/src/persistence/IdentifiableSqlServerPersistence.go?s=10964:11123#L294">UpdatePartially</a>
+					<a class="permalink" href="index.html#IdentifiableSqlServerPersistence.UpdatePartially">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentifiableSqlServerPersistence">IdentifiableSqlServerPersistence</a>[T, K]) UpdatePartially(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, id K, data <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#AnyValueMap">AnyValueMap</a>) (result T, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+UpdatePartially updates only few selected fields in a data item.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlation_id    (optional) transaction id to trace execution through call chain.
+	- id                an id of data item to be updated.
+	- data              a map with fields to be updated.
+Returns: updated item or error.
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SqlServerPersistence">type <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=6034:7198#L157">SqlServerPersistence</a>
+				<a class="permalink" href="index.html#SqlServerPersistence">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+SqlServerPersistence Abstract persistence component that stores data in SqlServer using plain driver.
+</p>
+<p>
+This is the most basic persistence component that is only
+able to store data items of any type. Specific CRUD operations
+over the data items must be implemented in child classes by
+accessing c._db or c.collection properties.
+</p>
+<pre>Configuration parameters
+	- collection:                  (optional) SqlServer collection name
+	- schema:                  	   (optional) SqlServer schema, default &#34;public&#34;
+	- connection(s):
+		- discovery_key:             (optional) a key to retrieve the connection from IDiscovery
+		- host:                      host name or IP address
+		- port:                      port number (default: 27017)
+		- uri:                       resource URI or connection string with all parameters in it
+	- credential(s):
+		- store_key:                 (optional) a key to retrieve the credentials from ICredentialStore
+		- username:                  (optional) user name
+		- password:                  (optional) user password
+	- options:
+		- connect_timeout:      (optional) number of milliseconds to wait before timing out when connecting a new client (default: 0)
+		- idle_timeout:         (optional) number of milliseconds a client must sit idle in the pool and not be checked out (default: 10000)
+		- max_pool_size:        (optional) maximum number of clients the pool should contain (default: 10)
+
+References:
+	- *:logger:*:*:1.0           (optional) ILogger components to pass log messages
+	- *:discovery:*:*:1.0        (optional) IDiscovery services
+	- *:credential-store:*:*:1.0 (optional) Credential stores to resolve credentials
+</pre>
+<p>
+Example:
+</p>
+<pre>import (
+	&#34;context&#34;
+	&#34;fmt&#34;
+
+	cconf &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34;
+	cpersist &#34;github.com/pip-services3-gox/pip-services3-data-gox/persistence&#34;
+	persist &#34;github.com/pip-services3-gox/pip-services3-sqlserver-gox/persistence&#34;
+	&#34;github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures&#34;
+)
+
+type SqlServerServerPersistence struct {
+	*persist.SqlServerPersistence[fixtures.Dummy]
+}
+
+func NewSqlServerServerPersistence() *SqlServerServerPersistence {
+	c := &amp;SqlServerServerPersistence{}
+	c.SqlServerPersistence = persist.InheritSqlServerPersistence[fixtures.Dummy](c, &#34;mydata&#34;)
+	return c
+}
+
+func (c *SqlServerServerPersistence) GetOneByName(ctx context.Context, correlationId string, name string) (item fixtures.Dummy, err error) {
+
+	query := &#34;SELECT * FROM &#34; + c.QuotedTableName() + &#34; WHERE [id]=@p1&#34;
+
+	rows, err := c.Client.QueryContext(ctx, query, name)
+	if err != nil {
+		return item, err
+	}
+	defer rows.Close()
+
+	if !rows.Next() {
+		return item, rows.Err()
+	}
+
+	if err == nil {
+		return c.Overrides.ConvertToPublic(rows)
+	}
+	return item, err
+}
+
+func (c *SqlServerServerPersistence) Set(ctx context.Context, correlationId string, item fixtures.Dummy) (result fixtures.Dummy, err error) {
+	objMap, convErr := c.Overrides.ConvertFromPublic(item)
+	if convErr != nil {
+		return result, convErr
+	}
+
+	GenerateObjectMapIdIfNotExists(objMap)
+
+	columns, values := c.GenerateColumnsAndValues(objMap)
+
+	paramsStr := c.GenerateParameters(len(values))
+	columnsStr := c.GenerateColumns(columns)
+	setParams := c.GenerateSetParameters(columns)
+	id := cpersist.GetObjectId(objMap)
+
+	query := &#34;INSERT INTO &#34; + c.QuotedTableName() + &#34; (&#34; + columnsStr + &#34;) OUTPUT INSERTED.* VALUES (&#34; + paramsStr + &#34;)&#34;
+
+	rows, err := c.Client.QueryContext(ctx, query, values...)
+	if err != nil {
+		return result, err
+	}
+	defer rows.Close()
+
+	if rows.Next() {
+		result, convErr = c.Overrides.ConvertToPublic(rows)
+		if convErr != nil {
+			return result, convErr
+		}
+		return result, nil
+	}
+
+	values = append(values, id)
+	query = &#34;UPDATE &#34; + c.QuotedTableName() + &#34; SET &#34; + setParams + &#34; OUTPUT INSERTED.* WHERE [id]=@p&#34; + strconv.FormatInt(int64(len(values)), 10)
+	rows, err = c.Client.QueryContext(ctx, query, values...)
+	if err != nil {
+		return result, err
+	}
+	defer rows.Close()
+
+	if !rows.Next() {
+		return result, rows.Err()
+	}
+
+	result, convErr = c.Overrides.ConvertToPublic(rows)
+	if convErr != nil {
+		return result, convErr
+	}
+
+	return result, rows.Err()
+
+}
+
+func main() {
+	persistence := NewSqlServerServerPersistence()
+	persistence.Configure(context.Background(), cconf.NewConfigParamsFromTuples(
+		&#34;host&#34;, &#34;localhost&#34;,
+		&#34;port&#34;, 27017,
+	))
+
+	err := persistence.Open(context.Background(), &#34;123&#34;)
+
+	res, err := persistence.Set(context.Background(), &#34;123&#34;, MyData{Id: &#34;1&#34;, Name: &#34;ABC&#34;})
+	item, err := persistence.GetOneByName(context.Background(), &#34;123&#34;, &#34;ABC&#34;)
+	fmt.Println(item) // Result: { Id: &#34;1&#34;, Name: &#34;ABC&#34; }
+}
+</pre>
+
+			<pre>type SqlServerPersistence[T <a href="http://localhost:6060/pkg/builtin/#any">any</a>] struct {
+<span id="SqlServerPersistence.Overrides"></span>    Overrides <a href="index.html#ISqlServerPersistenceOverrides">ISqlServerPersistenceOverrides</a>[T]
+    <span class="comment">// Defines general JSON convertors</span>
+<span id="SqlServerPersistence.JsonConvertor"></span>    JsonConvertor    <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/convert/">cconv</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/convert/#IJSONEngine">IJSONEngine</a>[T]
+<span id="SqlServerPersistence.JsonMapConvertor"></span>    JsonMapConvertor <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/convert/">cconv</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/convert/#IJSONEngine">IJSONEngine</a>[map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>]
+
+    <span class="comment">//The dependency resolver.</span>
+<span id="SqlServerPersistence.DependencyResolver"></span>    DependencyResolver *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/refer/">cref</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/refer/#DependencyResolver">DependencyResolver</a>
+    <span class="comment">//The logger.</span>
+<span id="SqlServerPersistence.Logger"></span>    Logger *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-components-gox/log/">clog</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-components-gox/log/#CompositeLogger">CompositeLogger</a>
+    <span class="comment">//The SqlServer connection component.</span>
+<span id="SqlServerPersistence.Connection"></span>    Connection *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/connect/">conn</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/connect/#SqlServerConnection">SqlServerConnection</a>
+    <span class="comment">//The SqlServer connection pool object.</span>
+<span id="SqlServerPersistence.Client"></span>    Client *<a href="http://localhost:6060/pkg/database/sql/">sql</a>.<a href="http://localhost:6060/pkg/database/sql/#DB">DB</a>
+    <span class="comment">//The SqlServer database name.</span>
+<span id="SqlServerPersistence.DatabaseName"></span>    DatabaseName <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    <span class="comment">//The SqlServer database schema name. If not set use &#34;public&#34; by default</span>
+<span id="SqlServerPersistence.SchemaName"></span>    SchemaName <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    <span class="comment">//The SqlServer table object.</span>
+<span id="SqlServerPersistence.TableName"></span>    TableName   <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="SqlServerPersistence.MaxPageSize"></span>    MaxPageSize <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="InheritSqlServerPersistence">func <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=7404:7531#L198">InheritSqlServerPersistence</a>
+					<a class="permalink" href="index.html#InheritSqlServerPersistence">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func InheritSqlServerPersistence[T <a href="http://localhost:6060/pkg/builtin/#any">any</a>](overrides <a href="index.html#ISqlServerPersistenceOverrides">ISqlServerPersistenceOverrides</a>[T], tableName <a href="http://localhost:6060/pkg/builtin/#string">string</a>) *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]</pre>
+				<p>
+InheritSqlServerPersistence creates a new instance of the persistence component.
+</p>
+<pre>Parameters:
+	- overrides References to override virtual methods
+	- tableName    (optional) a table name.
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="SqlServerPersistence.Clear">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=17744:17832#L553">Clear</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.Clear">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) Clear(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+Clear component state.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlationId 	(optional) transaction id to trace execution through call chain.
+Returns: error or nil no errors occured.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.ClearSchema">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=11747:11794#L340">ClearSchema</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.ClearSchema">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) ClearSchema()</pre>
+				<p>
+ClearSchema clears all auto-created objects
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.Close">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=17036:17130#L525">Close</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.Close">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) Close(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Close component and frees used resources.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlationId (optional) transaction id to trace execution through call chain.
+Returns: error or nil no errors occurred.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.Configure">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=8570:8662#L230">Configure</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.Configure">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) Configure(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, config *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/config/">cconf</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/config/#ConfigParams">ConfigParams</a>)</pre>
+				<p>
+Configure component by passing configuration parameters.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- config configuration parameters to be set.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.ConvertFromPublic">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=13472:13556#L398">ConvertFromPublic</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.ConvertFromPublic">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) ConvertFromPublic(value T) (map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ConvertFromPublic сonvert object value from func (c * SqlServerPersistence) to internal format.
+</p>
+<pre>Parameters:
+	- value an object in func (c * SqlServerPersistence) format to convert.
+Returns: converted object in internal format.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.ConvertFromPublicPartial">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=13962:14066#L413">ConvertFromPublicPartial</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.ConvertFromPublicPartial">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) ConvertFromPublicPartial(value map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>) (map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ConvertFromPublicPartial converts the given object from the public partial format.
+</p>
+<pre>Parameters:
+	- value the object to convert from the public partial format.
+Returns: the initial object.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.ConvertToPublic">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=12079:12155#L348">ConvertToPublic</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.ConvertToPublic">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) ConvertToPublic(rows *<a href="http://localhost:6060/pkg/database/sql/">sql</a>.<a href="http://localhost:6060/pkg/database/sql/#Rows">Rows</a>) (T, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ConvertToPublic converts object value from internal to func (c * SqlServerPersistence) format.
+</p>
+<pre>Parameters:
+	- value an object in internal format to convert.
+Returns: converted object in func (c * SqlServerPersistence) format.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.Create">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=29674:29787#L945">Create</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.Create">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) Create(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, item T) (result T, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Create creates a data item.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlation_id    (optional) transaction id to trace execution through call chain.
+	- item              an item to be created.
+Returns: (optional) callback function that receives created item or error.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.CreateSchema">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=18219:18320#L569">CreateSchema</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.CreateSchema">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) CreateSchema(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.DefineSchema">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=11345:11393#L328">DefineSchema</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.DefineSchema">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) DefineSchema()</pre>
+				<p>
+DefineSchema a database schema for this persistence, have to call in child class
+Override in child classes
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.DeleteByFilter">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=30920:31032#L977">DeleteByFilter</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.DeleteByFilter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) DeleteByFilter(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, filter <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+DeleteByFilter deletes data items that match to a given filter.
+This method shall be called by a func (c * SqlServerPersistence) deleteByFilter method from child class that
+receives FilterParams and converts them into a filter function.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlationId     (optional) transaction id to trace execution through call chain.
+	- filter            (optional) a filter JSON object.
+Returns: error or nil for success.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.EnsureIndex">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=10427:10536#L287">EnsureIndex</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.EnsureIndex">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) EnsureIndex(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, keys map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#string">string</a>, options map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+				<p>
+EnsureIndex adds index definition to create it on opening
+</p>
+<pre>Parameters:
+	- keys index keys (fields)
+	- options index options
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.EnsureSchema">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=11553:11623#L335">EnsureSchema</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.EnsureSchema">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) EnsureSchema(schemaStatement <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+				<p>
+EnsureSchema adds a statement to schema definition
+</p>
+<pre>	Parameters:
+  - schemaStatement a statement to be added to the schema
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.GenerateColumns">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=20071:20145#L635">GenerateColumns</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.GenerateColumns">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) GenerateColumns(columns []<a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+GenerateColumns generates a list of column names to use in SQL statements like: &#34;column1,column2,column3&#34;
+</p>
+<pre>Parameters:
+	- columns an array with column values
+Returns: a generated list of column names
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.GenerateColumnsAndValues">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=21808:21907#L694">GenerateColumnsAndValues</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.GenerateColumnsAndValues">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) GenerateColumnsAndValues(objMap map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>) ([]<a href="http://localhost:6060/pkg/builtin/#string">string</a>, []<a href="http://localhost:6060/pkg/builtin/#any">any</a>)</pre>
+				<p>
+GenerateColumnsAndValues generates a list of column parameters
+</p>
+<pre>Parameters:
+	- values an array with column values or a key-value map
+Returns: a generated list of column values
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.GenerateParameters">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=20633:20709#L655">GenerateParameters</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.GenerateParameters">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) GenerateParameters(valuesCount <a href="http://localhost:6060/pkg/builtin/#int">int</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+GenerateParameters generates a list of value parameters to use in SQL statements like: &#34;?,?,?&#34;
+</p>
+<pre>Parameters:
+	- values an array with column values or a key-value map
+Returns: a generated list of value parameters
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.GenerateSetParameters">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=21224:21304#L675">GenerateSetParameters</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.GenerateSetParameters">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) GenerateSetParameters(columns []<a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+GenerateSetParameters generates a list of column sets to use in UPDATE statements like: column1=?,column2=?
+</p>
+<pre>Parameters:
+	- values an array with column values or a key-value map
+Returns: a generated list of column sets
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.GetCountByFilter">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=25104:25229#L793">GetCountByFilter</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.GetCountByFilter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) GetCountByFilter(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>,
+    filter <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (<a href="http://localhost:6060/pkg/builtin/#int64">int64</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetCountByFilter gets a number of data items retrieved by a given filter.
+This method shall be called by a func (c * SqlServerPersistence) getCountByFilter method from child class that
+receives FilterParams and converts them into a filter function.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlationId     (optional) transaction id to trace execution through call chain.
+	- filter            (optional) a filter JSON object
+Returns: data page or error.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.GetListByFilter">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=26597:26760#L841">GetListByFilter</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.GetListByFilter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) GetListByFilter(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>,
+    filter <a href="http://localhost:6060/pkg/builtin/#string">string</a>, sort <a href="http://localhost:6060/pkg/builtin/#string">string</a>, selection <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (items []T, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetListByFilter gets a list of data items retrieved by a given filter and sorted according to sort parameters.
+This method shall be called by a func (c * SqlServerPersistence) getListByFilter method from child class that
+receives FilterParams and converts them into a filter function.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlationId    (optional) transaction id to trace execution through call chain.
+	- filter           (optional) a filter JSON object
+	- paging           (optional) paging parameters
+	- sort             (optional) sorting JSON object
+	- select           (optional) projection JSON object
+Returns: data list or error.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.GetOneRandom">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=28107:28231#L894">GetOneRandom</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.GetOneRandom">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) GetOneRandom(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, filter <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (item T, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetOneRandom gets a random item from items that match to a given filter.
+This method shall be called by a func (c * SqlServerPersistence) getOneRandom method from child class that
+receives FilterParams and converts them into a filter function.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlationId     (optional) transaction id to trace execution through call chain.
+	- filter            (optional) a filter JSON object
+Returns: random item or error.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.GetPageByFilter">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=22883:23086#L720">GetPageByFilter</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.GetPageByFilter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) GetPageByFilter(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>,
+    filter <a href="http://localhost:6060/pkg/builtin/#string">string</a>, paging <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#PagingParams">PagingParams</a>, sort <a href="http://localhost:6060/pkg/builtin/#string">string</a>, selection <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (page <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#DataPage">DataPage</a>[T], err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetPageByFilter gets a page of data items retrieved by a given filter and sorted according to sort parameters.
+This method shall be called by a func (c * SqlServerPersistence) getPageByFilter method from child class that
+receives FilterParams and converts them into a filter function.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlationId     (optional) transaction id to trace execution through call chain.
+	- filter            (optional) a filter JSON object
+	- paging            (optional) paging parameters
+	- sort              (optional) sorting JSON object
+	- select            (optional) projection JSON object
+Returns: receives a data page or error.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.IsOpen">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=14949:14996#L449">IsOpen</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.IsOpen">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) IsOpen() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsOpen checks if the component is opened.
+</p>
+<pre>Returns: true if the component has been opened and false otherwise.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.IsTerminated">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=15164:15217#L455">IsTerminated</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.IsTerminated">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) IsTerminated() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsTerminated checks if the wee need to terminate process before close component.
+</p>
+<pre>Returns: true if you need terminate your processes.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.Open">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=15549:15642#L472">Open</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.Open">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) Open(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Open the component.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- correlationId (optional) transaction id to trace execution through call chain.
+Returns: error or nil no errors occurred.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.QuoteIdentifier">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=14267:14337#L423">QuoteIdentifier</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.QuoteIdentifier">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) QuoteIdentifier(value <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.QuotedTableName">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=14566:14624#L434">QuotedTableName</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.QuotedTableName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) QuotedTableName() <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+QuotedTableName return quoted SchemaName with TableName (&#34;schema&#34;.&#34;table&#34;)
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.SetReferences">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=9242:9339#L246">SetReferences</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.SetReferences">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) SetReferences(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, references <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/refer/">cref</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/refer/#IReferences">IReferences</a>)</pre>
+				<p>
+SetReferences to dependent components.
+</p>
+<pre>Parameters:
+	- ctx context.Context
+	- references references to locate the component dependencies.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SqlServerPersistence.UnsetReferences">func (*SqlServerPersistence[T]) <a href="http://localhost:6060/src/persistence/SqlServerPersistence.go?s=9891:9942#L268">UnsetReferences</a>
+					<a class="permalink" href="index.html#SqlServerPersistence.UnsetReferences">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SqlServerPersistence">SqlServerPersistence</a>[T]) UnsetReferences()</pre>
+				<p>
+UnsetReferences (clears) previously set references to dependent components.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.18.7.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>test - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.18.7";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package test
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "test/persistence"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#DummyJsonSqlServerPersistence">type DummyJsonSqlServerPersistence</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDummyJsonSqlServerPersistence">func NewDummyJsonSqlServerPersistence() *DummyJsonSqlServerPersistence</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DummyJsonSqlServerPersistence.DefineSchema">func (c *DummyJsonSqlServerPersistence) DefineSchema()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DummyJsonSqlServerPersistence.GetCountByFilter">func (c *DummyJsonSqlServerPersistence) GetCountByFilter(ctx context.Context, correlationId string, filter cdata.FilterParams) (count int64, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DummyJsonSqlServerPersistence.GetOneRandom">func (c *DummyJsonSqlServerPersistence) GetOneRandom(ctx context.Context, correlationId string) (item fixtures.Dummy, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DummyJsonSqlServerPersistence.GetPageByFilter">func (c *DummyJsonSqlServerPersistence) GetPageByFilter(ctx context.Context, correlationId string, filter cdata.FilterParams, paging cdata.PagingParams) (page cdata.DataPage[fixtures.Dummy], err error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DummyMapSqlServerPersistence">type DummyMapSqlServerPersistence</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDummyMapSqlServerPersistence">func NewDummyMapSqlServerPersistence() *DummyMapSqlServerPersistence</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DummyMapSqlServerPersistence.DefineSchema">func (c *DummyMapSqlServerPersistence) DefineSchema()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DummyMapSqlServerPersistence.GetCountByFilter">func (c *DummyMapSqlServerPersistence) GetCountByFilter(ctx context.Context, correlationId string, filter cdata.FilterParams) (count int64, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DummyMapSqlServerPersistence.GetPageByFilter">func (c *DummyMapSqlServerPersistence) GetPageByFilter(ctx context.Context, correlationId string, filter cdata.FilterParams, paging cdata.PagingParams) (page cdata.DataPage[map[string]any], err error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DummyRefSqlServerPersistence">type DummyRefSqlServerPersistence</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDummyRefSqlServerPersistence">func NewDummyRefSqlServerPersistence() *DummyRefSqlServerPersistence</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DummyRefSqlServerPersistence.GetCountByFilter">func (c *DummyRefSqlServerPersistence) GetCountByFilter(ctx context.Context, correlationId string, filter cdata.FilterParams) (count int64, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DummyRefSqlServerPersistence.GetPageByFilter">func (c *DummyRefSqlServerPersistence) GetPageByFilter(ctx context.Context, correlationId string, filter cdata.FilterParams, paging cdata.PagingParams) (page cdata.DataPage[*fixtures.Dummy], err error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DummySqlServerPersistence">type DummySqlServerPersistence</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDummySqlServerPersistence">func NewDummySqlServerPersistence() *DummySqlServerPersistence</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DummySqlServerPersistence.DefineSchema">func (c *DummySqlServerPersistence) DefineSchema()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DummySqlServerPersistence.GetCountByFilter">func (c *DummySqlServerPersistence) GetCountByFilter(ctx context.Context, correlationId string, filter cdata.FilterParams) (count int64, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DummySqlServerPersistence.GetOneRandom">func (c *DummySqlServerPersistence) GetOneRandom(ctx context.Context, correlationId string) (item fixtures.Dummy, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DummySqlServerPersistence.GetPageByFilter">func (c *DummySqlServerPersistence) GetPageByFilter(ctx context.Context, correlationId string, filter cdata.FilterParams, paging cdata.PagingParams) (page cdata.DataPage[fixtures.Dummy], err error)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/test/persistence/DummyJsonSqlServerPersistence.go">DummyJsonSqlServerPersistence.go</a>
+			
+				<a href="http://localhost:6060/src/test/persistence/DummyMapSqlServerPersistence.go">DummyMapSqlServerPersistence.go</a>
+			
+				<a href="http://localhost:6060/src/test/persistence/DummyRefSqlServerPersistence.go">DummyRefSqlServerPersistence.go</a>
+			
+				<a href="http://localhost:6060/src/test/persistence/DummySqlServerPersistence.go">DummySqlServerPersistence.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="DummyJsonSqlServerPersistence">type <a href="http://localhost:6060/src/test/persistence/DummyJsonSqlServerPersistence.go?s=271:389#L1">DummyJsonSqlServerPersistence</a>
+				<a class="permalink" href="index.html#DummyJsonSqlServerPersistence">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type DummyJsonSqlServerPersistence struct {
+    *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/persistence/">persist</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/persistence/#IdentifiableJsonSqlServerPersistence">IdentifiableJsonSqlServerPersistence</a>[<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/">fixtures</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/#Dummy">Dummy</a>, <a href="http://localhost:6060/pkg/builtin/#string">string</a>]
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDummyJsonSqlServerPersistence">func <a href="http://localhost:6060/src/test/persistence/DummyJsonSqlServerPersistence.go?s=393:463#L5">NewDummyJsonSqlServerPersistence</a>
+					<a class="permalink" href="index.html#NewDummyJsonSqlServerPersistence">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewDummyJsonSqlServerPersistence() *<a href="index.html#DummyJsonSqlServerPersistence">DummyJsonSqlServerPersistence</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="DummyJsonSqlServerPersistence.DefineSchema">func (*DummyJsonSqlServerPersistence) <a href="http://localhost:6060/src/test/persistence/DummyJsonSqlServerPersistence.go?s=661:715#L11">DefineSchema</a>
+					<a class="permalink" href="index.html#DummyJsonSqlServerPersistence.DefineSchema">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DummyJsonSqlServerPersistence">DummyJsonSqlServerPersistence</a>) DefineSchema()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DummyJsonSqlServerPersistence.GetCountByFilter">func (*DummyJsonSqlServerPersistence) <a href="http://localhost:6060/src/test/persistence/DummyJsonSqlServerPersistence.go?s=1462:1615#L33">GetCountByFilter</a>
+					<a class="permalink" href="index.html#DummyJsonSqlServerPersistence.GetCountByFilter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DummyJsonSqlServerPersistence">DummyJsonSqlServerPersistence</a>) GetCountByFilter(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>,
+    filter <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#FilterParams">FilterParams</a>) (count <a href="http://localhost:6060/pkg/builtin/#int64">int64</a>, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DummyJsonSqlServerPersistence.GetOneRandom">func (*DummyJsonSqlServerPersistence) <a href="http://localhost:6060/src/test/persistence/DummyJsonSqlServerPersistence.go?s=1874:2002#L44">GetOneRandom</a>
+					<a class="permalink" href="index.html#DummyJsonSqlServerPersistence.GetOneRandom">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DummyJsonSqlServerPersistence">DummyJsonSqlServerPersistence</a>) GetOneRandom(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (item <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/">fixtures</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/#Dummy">Dummy</a>, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DummyJsonSqlServerPersistence.GetPageByFilter">func (*DummyJsonSqlServerPersistence) <a href="http://localhost:6060/src/test/persistence/DummyJsonSqlServerPersistence.go?s=974:1177#L18">GetPageByFilter</a>
+					<a class="permalink" href="index.html#DummyJsonSqlServerPersistence.GetPageByFilter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DummyJsonSqlServerPersistence">DummyJsonSqlServerPersistence</a>) GetPageByFilter(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>,
+    filter <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#FilterParams">FilterParams</a>, paging <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#PagingParams">PagingParams</a>) (page <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#DataPage">DataPage</a>[<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/">fixtures</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/#Dummy">Dummy</a>], err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DummyMapSqlServerPersistence">type <a href="http://localhost:6060/src/test/persistence/DummyMapSqlServerPersistence.go?s=196:309#L1">DummyMapSqlServerPersistence</a>
+				<a class="permalink" href="index.html#DummyMapSqlServerPersistence">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type DummyMapSqlServerPersistence struct {
+    *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/persistence/">persist</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/persistence/#IdentifiableSqlServerPersistence">IdentifiableSqlServerPersistence</a>[map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>, <a href="http://localhost:6060/pkg/builtin/#string">string</a>]
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDummyMapSqlServerPersistence">func <a href="http://localhost:6060/src/test/persistence/DummyMapSqlServerPersistence.go?s=313:381#L4">NewDummyMapSqlServerPersistence</a>
+					<a class="permalink" href="index.html#NewDummyMapSqlServerPersistence">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewDummyMapSqlServerPersistence() *<a href="index.html#DummyMapSqlServerPersistence">DummyMapSqlServerPersistence</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="DummyMapSqlServerPersistence.DefineSchema">func (*DummyMapSqlServerPersistence) <a href="http://localhost:6060/src/test/persistence/DummyMapSqlServerPersistence.go?s=565:618#L10">DefineSchema</a>
+					<a class="permalink" href="index.html#DummyMapSqlServerPersistence.DefineSchema">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DummyMapSqlServerPersistence">DummyMapSqlServerPersistence</a>) DefineSchema()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DummyMapSqlServerPersistence.GetCountByFilter">func (*DummyMapSqlServerPersistence) <a href="http://localhost:6060/src/test/persistence/DummyMapSqlServerPersistence.go?s=1391:1543#L31">GetCountByFilter</a>
+					<a class="permalink" href="index.html#DummyMapSqlServerPersistence.GetCountByFilter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DummyMapSqlServerPersistence">DummyMapSqlServerPersistence</a>) GetCountByFilter(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>,
+    filter <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#FilterParams">FilterParams</a>) (count <a href="http://localhost:6060/pkg/builtin/#int64">int64</a>, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DummyMapSqlServerPersistence.GetPageByFilter">func (*DummyMapSqlServerPersistence) <a href="http://localhost:6060/src/test/persistence/DummyMapSqlServerPersistence.go?s=911:1113#L16">GetPageByFilter</a>
+					<a class="permalink" href="index.html#DummyMapSqlServerPersistence.GetPageByFilter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DummyMapSqlServerPersistence">DummyMapSqlServerPersistence</a>) GetPageByFilter(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>,
+    filter <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#FilterParams">FilterParams</a>, paging <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#PagingParams">PagingParams</a>) (page <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#DataPage">DataPage</a>[map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>], err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DummyRefSqlServerPersistence">type <a href="http://localhost:6060/src/test/persistence/DummyRefSqlServerPersistence.go?s=271:385#L1">DummyRefSqlServerPersistence</a>
+				<a class="permalink" href="index.html#DummyRefSqlServerPersistence">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type DummyRefSqlServerPersistence struct {
+    *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/persistence/">persist</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/persistence/#IdentifiableSqlServerPersistence">IdentifiableSqlServerPersistence</a>[*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/">fixtures</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/#Dummy">Dummy</a>, <a href="http://localhost:6060/pkg/builtin/#string">string</a>]
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDummyRefSqlServerPersistence">func <a href="http://localhost:6060/src/test/persistence/DummyRefSqlServerPersistence.go?s=389:457#L5">NewDummyRefSqlServerPersistence</a>
+					<a class="permalink" href="index.html#NewDummyRefSqlServerPersistence">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewDummyRefSqlServerPersistence() *<a href="index.html#DummyRefSqlServerPersistence">DummyRefSqlServerPersistence</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="DummyRefSqlServerPersistence.GetCountByFilter">func (*DummyRefSqlServerPersistence) <a href="http://localhost:6060/src/test/persistence/DummyRefSqlServerPersistence.go?s=1126:1278#L27">GetCountByFilter</a>
+					<a class="permalink" href="index.html#DummyRefSqlServerPersistence.GetCountByFilter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DummyRefSqlServerPersistence">DummyRefSqlServerPersistence</a>) GetCountByFilter(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>,
+    filter <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#FilterParams">FilterParams</a>) (count <a href="http://localhost:6060/pkg/builtin/#int64">int64</a>, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DummyRefSqlServerPersistence.GetPageByFilter">func (*DummyRefSqlServerPersistence) <a href="http://localhost:6060/src/test/persistence/DummyRefSqlServerPersistence.go?s=642:845#L11">GetPageByFilter</a>
+					<a class="permalink" href="index.html#DummyRefSqlServerPersistence.GetPageByFilter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DummyRefSqlServerPersistence">DummyRefSqlServerPersistence</a>) GetPageByFilter(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>,
+    filter <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#FilterParams">FilterParams</a>, paging <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#PagingParams">PagingParams</a>) (page <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#DataPage">DataPage</a>[*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/">fixtures</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/#Dummy">Dummy</a>], err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DummySqlServerPersistence">type <a href="http://localhost:6060/src/test/persistence/DummySqlServerPersistence.go?s=271:381#L1">DummySqlServerPersistence</a>
+				<a class="permalink" href="index.html#DummySqlServerPersistence">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type DummySqlServerPersistence struct {
+    *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/persistence/">persist</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/persistence/#IdentifiableSqlServerPersistence">IdentifiableSqlServerPersistence</a>[<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/">fixtures</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/#Dummy">Dummy</a>, <a href="http://localhost:6060/pkg/builtin/#string">string</a>]
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDummySqlServerPersistence">func <a href="http://localhost:6060/src/test/persistence/DummySqlServerPersistence.go?s=385:447#L5">NewDummySqlServerPersistence</a>
+					<a class="permalink" href="index.html#NewDummySqlServerPersistence">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewDummySqlServerPersistence() *<a href="index.html#DummySqlServerPersistence">DummySqlServerPersistence</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="DummySqlServerPersistence.DefineSchema">func (*DummySqlServerPersistence) <a href="http://localhost:6060/src/test/persistence/DummySqlServerPersistence.go?s=628:678#L11">DefineSchema</a>
+					<a class="permalink" href="index.html#DummySqlServerPersistence.DefineSchema">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DummySqlServerPersistence">DummySqlServerPersistence</a>) DefineSchema()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DummySqlServerPersistence.GetCountByFilter">func (*DummySqlServerPersistence) <a href="http://localhost:6060/src/test/persistence/DummySqlServerPersistence.go?s=1451:1600#L33">GetCountByFilter</a>
+					<a class="permalink" href="index.html#DummySqlServerPersistence.GetCountByFilter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DummySqlServerPersistence">DummySqlServerPersistence</a>) GetCountByFilter(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>,
+    filter <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#FilterParams">FilterParams</a>) (count <a href="http://localhost:6060/pkg/builtin/#int64">int64</a>, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DummySqlServerPersistence.GetOneRandom">func (*DummySqlServerPersistence) <a href="http://localhost:6060/src/test/persistence/DummySqlServerPersistence.go?s=1833:1957#L44">GetOneRandom</a>
+					<a class="permalink" href="index.html#DummySqlServerPersistence.GetOneRandom">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DummySqlServerPersistence">DummySqlServerPersistence</a>) GetOneRandom(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (item <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/">fixtures</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/#Dummy">Dummy</a>, err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DummySqlServerPersistence.GetPageByFilter">func (*DummySqlServerPersistence) <a href="http://localhost:6060/src/test/persistence/DummySqlServerPersistence.go?s=971:1170#L17">GetPageByFilter</a>
+					<a class="permalink" href="index.html#DummySqlServerPersistence.GetPageByFilter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DummySqlServerPersistence">DummySqlServerPersistence</a>) GetPageByFilter(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>,
+    filter <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#FilterParams">FilterParams</a>, paging <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#PagingParams">PagingParams</a>) (page <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/">cdata</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-commons-gox/data/#DataPage">DataPage</a>[<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/">fixtures</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-sqlserver-gox/test/fixtures/#Dummy">Dummy</a>], err <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.18.7.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>
