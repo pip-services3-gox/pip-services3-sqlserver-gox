@@ -49,6 +49,4 @@ Before committing changes run dockerized test as:
 
 ## Contacts
 
-The library is created and maintained by **Sergey Seroukhov**, **Dmitrii Uzdemir** and **Dmitrii Levichev**.
-
-The documentation is written by **Mark Makarychev**.
+The library is created and maintained by **Sergey Seroukhov** and **Danil Prisiazhnyi**.
